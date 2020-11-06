@@ -4,17 +4,30 @@ import React, { useContext, useReducer } from 'react'
 // initial state
 //////////////////
 const initialState = {
-    url: "http://ruby-on-rails-usernotes-app.herokuapp.com"
+    url: "https://ruby-on-rails-usernotes-app.herokuapp.com" , 
+    token: null ,
+    username: null
 }
 /////////////
 // readucer
 ////////////
 const reducer= (state,action)=>{
+    let newState;
     switch(action.type){
+        case "auth":
+            newState = { ...state, ...action.payload };
+            return newState;
+            break;
+        case "logout":
+            newState = { ...state, token:null, username:null };
+            window.localStorage.removeItem("auth");
+            return newState;
+            break;    
         default:
             return state
+            break
     }
-}
+};
 /////////////////
 // appcontext
 ////////////////
