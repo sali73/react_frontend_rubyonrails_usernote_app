@@ -12,12 +12,16 @@ const Nav= (props)=>{
             <Link to='/'>
                 <div>Home</div>
             </Link>
-           { !state.token ? (<> <Link to='/auth/signup'>
+           {!state.token ? (
+           <> 
+           <Link to='/auth/signup'>
                 <div>Signup</div>
             </Link>
             <Link to='/auth/login'>
                 <div>Login</div>
-            </Link></>): null}
+            </Link>
+            </>
+            ): null}
             {state.token ? <div
              onClick={()=>{
                 dispatch({ type: "logout"})

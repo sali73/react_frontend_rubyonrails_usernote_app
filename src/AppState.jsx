@@ -6,7 +6,17 @@ import React, { useContext, useReducer } from 'react'
 const initialState = {
     url: "https://ruby-on-rails-usernotes-app.herokuapp.com" , 
     token: null ,
-    username: null
+    username: null,
+    notes: null,
+    new: {
+        title: " ",
+        body: " "
+    },
+    edit: {
+        id: 0,
+        title: " ",
+        body: " "
+    }
 }
 /////////////
 // readucer
@@ -22,7 +32,12 @@ const reducer= (state,action)=>{
             newState = { ...state, token:null, username:null };
             window.localStorage.removeItem("auth");
             return newState;
-            break;    
+            break; 
+        case "getNotes":
+            console.log(action.payload)
+            newState = { ...state, notes: action.payload };
+            return newState;
+            break;   
         default:
             return state
             break
@@ -36,8 +51,12 @@ const AppContext = React.createContext(null)
 //AppState Component
 /////////////////////
 export const AppState = (props)=>{
-    const [state,dispatch] = useReducer(reducer,initialState)
-    return <AppContext.Provider value={{state,dispatch}}>{props.children}</AppContext.Provider>
+    const [state, dispatch] = useReducer(reducer,initialState)
+    return (
+    <AppContext.Provider value={{state, dispatch}}>
+        {props.children}
+    </AppContext.Provider>
+    )
 }
 ///////////////////////
 // useAppState hook
