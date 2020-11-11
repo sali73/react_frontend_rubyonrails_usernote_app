@@ -1,3 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+*{
+  font-family: 'Indie Flower', cursive;
+}
+
+body {
+  background-color: #111;
+  background-image: url(https://image.freepik.com/free-photo/side-view-hand-putting-sticky-notes-window_23-2148502217.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+  text-align: center;
+  width: 100vw;
+  font-weight: 700;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#fly-in {
+  font-size: 4em;
+  margin: 40vh auto;
+  height: 20vh; 
+}
+
+#fly-in span {
+  display: block;
+  font-size: .4em;
+  opacity: .8;
+}
+
+#fly-in div {
+ position: fixed; 
+  margin: 2vh 0;
+  opacity: 0;
+  left: 10vw;
+  width: 80vw;
+  animation: switch 24s linear infinite;
+}
+#fly-in div:nth-child(2) { animation-delay: 6s}
+#fly-in div:nth-child(3) { animation-delay: 12s}
+#fly-in div:nth-child(4) { animation-delay: 18s}
+
+@keyframes switch {
+    0% { opacity: 0;filter: blur(20px); transform:scale(12)}
+    3% { opacity: 1;filter: blur(0); transform:scale(1)}
+    10% { opacity: 1;filter: blur(0); transform:scale(.9)}
+    13% { opacity: 0;filter: blur(10px); transform:scale(.1)}
+    80% { opacity: 0}
+    100% { opacity: 0}
+}
+
 /* /////////////////////////////
  Nav Component
 //////////////////////////// */
@@ -9,6 +61,7 @@ header {
 header nav {
   display: flex;
   justify-content: space-around;
+  margin-top: 20px;
 }
 
 header nav a {
@@ -17,7 +70,7 @@ header nav a {
 }
 
 header nav div {
-  font-size: larger;
+  font-size: x-large;
   background-color: crimson;
   color: white;
   width: 200px;
@@ -66,3 +119,4 @@ DASHBOARD
   margin: 10px auto;
   border: 3px solid crimson;
 }
+

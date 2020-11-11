@@ -7,7 +7,9 @@ const Nav = (props) => {
 
   return (
     <header>
-      <h1> Note Taking App</h1>
+      <div className="navbar navbar-dark bg-dark">
+        <h1> Notes App</h1>
+      </div>
       <nav>
         {!state.token ? (
           <>
