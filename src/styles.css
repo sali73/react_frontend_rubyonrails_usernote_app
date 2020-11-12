@@ -18,6 +18,7 @@ body {
   font-size: 4em;
   margin: 40vh auto;
   height: 20vh; 
+  color: #111;
 }
 #fly-in span {
   display: block;
