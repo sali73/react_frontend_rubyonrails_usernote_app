@@ -27,7 +27,7 @@ const Dashboard = (props) => {
       <div className="dashboard">
         <h1>{username}'s Notes</h1>
         <Link to="/dashboard/new">
-          <button>New Note</button>
+          <button className='newnote'>New Note</button>
         </Link>
         <Route
           path="/dashboard/:action"
@@ -36,8 +36,9 @@ const Dashboard = (props) => {
         <ul>
           {state.notes.map((note) => (
             <div className="note" key={note.id}>
-              <h2>{note.title}</h2>
-              <h4>{note.body}</h4>
+              <h2>Title: {note.title}</h2>
+              <h4>Body: {note.body}</h4>
+              <div style={{ display: 'flex'}}>
               <button
                 onClick={() => {
                   dispatch({ type: "select", payload: note });
@@ -58,6 +59,7 @@ const Dashboard = (props) => {
               >
                 Delete Note
               </button>
+              </div>
             </div>
           ))}
         </ul>

@@ -72,7 +72,7 @@ const Auth = (props) => {
           onChange={handleChange}
           placeholder=" Password "
         />
-        <input type="submit" value={type} />
+        <input style={{ fontSize: "2em", fontWeight:"bold", backgroundColor:'black',color: 'crimson '}} type="submit" value={type} />
       </form>
     </div>
   );

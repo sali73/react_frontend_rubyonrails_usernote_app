@@ -59,7 +59,7 @@ const Form = (props) => {
           onChange={handleChange}
           placeholder="Body"
         />
-        <input type="submit" value={action} />
+        <input style={{ fontSize: "2em", fontWeight:"bold", backgroundColor:'black',color: 'crimson '}}  type="submit" value={action} />
       </form>
     </div>
   );
