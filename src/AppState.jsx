@@ -5,7 +5,7 @@ import React, { useContext, useReducer } from "react";
 //////////////////////
 
 const initialState = {
-  url: "https://ruby-on-rails-usernotes-app.herokuapp.com/",
+  url: "https://ruby-on-rails-usernotes-app.herokuapp.com",
   token: null,
   username: null,
   notes: null,

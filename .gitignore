@@ -2,3 +2,5 @@
 /dist/
 /dev/
 /build/
+# Local Netlify folder
+.netlify
