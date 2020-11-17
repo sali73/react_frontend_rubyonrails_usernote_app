@@ -116,6 +116,11 @@ DASHBOARD
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.8);
 }
+.dashboard .note strong{
+  color: yellow;
+  font-size: 2em;
+}
+
 .note h2{
   margin-top: 30px;
 }
@@ -123,3 +128,17 @@ DASHBOARD
   margin-bottom: 30px;
 }
 
+/* /////////////
+Mobil setup
+/////////// */
+
+@media only screen and (max-width: 600px) {
+  .dashboard .note {
+    text-align: center;
+    width: 70%;
+    margin: 30px auto;
+    border: 3px solid crimson;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}

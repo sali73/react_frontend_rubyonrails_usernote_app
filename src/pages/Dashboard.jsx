@@ -36,8 +36,8 @@ const Dashboard = (props) => {
         <ul>
           {state.notes.map((note) => (
             <div className="note" key={note.id}>
-              <h2>Title: {note.title}</h2>
-              <h4>Body: {note.body}</h4>
+              <h2><strong>Title: </strong> {note.title}</h2>
+              <h4><strong>Body: </strong> {note.body}</h4>
               <div style={{ display: 'flex'}}>
               <button
                 onClick={() => {
