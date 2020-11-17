@@ -20,11 +20,6 @@ body {
   height: 20vh; 
   color: #111;
 }
-#fly-in span {
-  display: block;
-  font-size: .4em;
-  opacity: .8;
-}
 #fly-in div {
  position: fixed; 
   margin: 2vh 0;
@@ -135,5 +130,8 @@ Mobil setup
   .dashboard .note {
     width: 100%;
     padding-left: 0px;
+  };
+  #fly-in {
+    margin: 10vh auto;
   }
 }
