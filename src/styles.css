@@ -134,11 +134,6 @@ Mobil setup
 
 @media only screen and (max-width: 600px) {
   .dashboard .note {
-    text-align: center;
     width: 70%;
-    margin: 30px auto;
-    border: 3px solid crimson;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.8);
   }
 }
